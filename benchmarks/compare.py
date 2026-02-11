@@ -38,18 +38,7 @@ def benchmark_fast_requests(urls, iterations=3):
 def main():
     # Test with different URL counts
     test_cases = [
-        ("10 URLs", [
-            "https://httpbin.org/delay/1",
-            "https://httpbin.org/delay/1",
-            "https://httpbin.org/delay/1",
-            "https://httpbin.org/delay/1",
-            "https://httpbin.org/delay/1",
-            "https://httpbin.org/delay/1",
-            "https://httpbin.org/delay/1",
-            "https://httpbin.org/delay/1",
-            "https://httpbin.org/delay/1",
-            "https://httpbin.org/delay/1",
-        ]),
+        ("10 URLs", [f"https://httpbin.org/delay/1" for _ in range(10)]),
         ("20 URLs", [f"https://httpbin.org/delay/1" for _ in range(20)]),
         ("50 URLs", [f"https://httpbin.org/delay/1" for _ in range(50)]),
     ]
@@ -80,9 +69,7 @@ def main():
         print(f"Results:")
         print(f"  requests:       {req_time:.2f}s ({req_success} successful)")
         print(f"  fast_requests:  {fast_time:.2f}s ({fast_success} successful)")
-        print(f"  Speedup:        {speedup:.1f}x faster! 🚀")
-        print()
-        print()
+        print(f"  Speedup:        {speedup:.1f}x faster! 🚀\n\n")
 
 if __name__ == "__main__":
     main()

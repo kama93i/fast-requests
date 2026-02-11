@@ -48,6 +48,7 @@ Benchmarked on [your system specs] fetching URLs with 1-second delay:
 | 10 URLs   | 18.2s    | 2.14s         | ~8x     |
 | 20 URLs   | 35.5s    | 3.3s          | ~17x    |
 | 50 URLs   | 93.9s    | 2.9s          | ~36x    |
+
 *Note: Speedup scales with number of concurrent requests*
 
 ## How It Works

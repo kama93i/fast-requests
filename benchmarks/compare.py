@@ -38,9 +38,9 @@ def benchmark_fast_requests(urls, iterations=3):
 def main():
     # Test with different URL counts
     test_cases = [
-        ("10 URLs", [f"https://httpbin.org" for _ in range(10)]),
-        ("20 URLs", [f"https://httpbin.org" for _ in range(20)]),
-        ("50 URLs", [f"https://httpbin.org" for _ in range(50)]),
+        ("10 URLs", [f"https://jsonplaceholder.typicode.com/posts" for _ in range(10)]),
+        ("20 URLs", [f"https://jsonplaceholder.typicode.com/posts" for _ in range(20)]),
+        ("50 URLs", [f"https://jsonplaceholder.typicode.com/posts" for _ in range(50)]),
     ]
     
     print("=" * 70)
